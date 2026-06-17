@@ -1,0 +1,6 @@
+{
+  "name": "MoveShot - Productora de Cine",
+  "description": "Portafolio online y landing page para MoveShot, productora de cine y creación de contenido cinematográfico de alto impacto.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

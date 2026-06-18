@@ -12,18 +12,18 @@ const instagramAccounts = [
 
 export default function Contact() {
   return (
-    <section id="contacto" className="py-24 md:py-32 bg-white relative border-b border-zinc-200">
+    <section id="contacto" className="py-24 md:py-32 bg-zinc-950 relative border-b border-zinc-800">
       <div className="max-w-3xl mx-auto px-6 text-center">
         <span className="text-[10px] font-mono tracking-[0.3em] text-zinc-500 uppercase flex items-center justify-center gap-2 mb-4 font-bold">
           <span className="w-1.5 h-1.5 rounded-full bg-zinc-400" />
           Agendar Rodaje
         </span>
 
-        <h2 className="font-display font-black text-3xl sm:text-5xl text-black tracking-[0.1em] uppercase leading-none">
+        <h2 className="font-display font-black text-3xl sm:text-5xl text-amber-400 tracking-[0.1em] uppercase leading-none">
           ¿Tienes un proyecto?<br className="hidden sm:block" /> Hablemos.
         </h2>
 
-        <p className="text-zinc-600 font-light text-xs sm:text-sm leading-relaxed tracking-wider uppercase mt-6 opacity-85">
+        <p className="text-zinc-400 font-light text-xs sm:text-sm leading-relaxed tracking-wider uppercase mt-6 opacity-85">
           Síguenos o escríbenos directo, lo que prefieras.
         </p>
 
@@ -34,12 +34,12 @@ export default function Contact() {
               href={acc.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col items-center gap-3 p-6 border border-zinc-200 rounded-sm bg-zinc-50 hover:border-black hover:bg-white transition-all duration-300 group"
+              className="flex flex-col items-center gap-3 p-6 border border-zinc-800 rounded-sm bg-zinc-900 hover:border-amber-500 hover:bg-zinc-950 transition-all duration-300 group"
             >
-              <div className="p-2.5 rounded-sm bg-white border border-zinc-200 text-black group-hover:bg-black group-hover:text-white transition-colors">
+              <div className="p-2.5 rounded-sm bg-zinc-950 border border-zinc-800 text-amber-400 group-hover:bg-amber-500 group-hover:text-white transition-colors">
                 <Instagram className="w-4 h-4" />
               </div>
-              <span className="text-xs sm:text-sm font-bold text-zinc-900 font-mono">{acc.handle}</span>
+              <span className="text-xs sm:text-sm font-bold text-zinc-50 font-mono">{acc.handle}</span>
             </a>
           ))}
         </div>
@@ -49,7 +49,7 @@ export default function Contact() {
             href={`https://wa.me/${WHATSAPP_NUMBER}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto px-8 py-4 bg-black text-white hover:bg-zinc-800 text-xs font-bold tracking-[0.2em] uppercase transition-all duration-300 flex items-center justify-center gap-2"
+            className="w-full sm:w-auto px-8 py-4 bg-amber-500 text-zinc-950 hover:bg-amber-400 text-xs font-bold tracking-[0.2em] uppercase transition-all duration-300 flex items-center justify-center gap-2"
           >
             <MessageCircle className="w-4 h-4" />
             WhatsApp
@@ -57,7 +57,7 @@ export default function Contact() {
           </a>
           <a
             href={`mailto:${EMAIL}`}
-            className="w-full sm:w-auto px-8 py-4 bg-transparent border border-zinc-300 text-black hover:bg-zinc-50 text-xs font-bold tracking-[0.2em] uppercase transition-all duration-300 flex items-center justify-center gap-2"
+            className="w-full sm:w-auto px-8 py-4 bg-transparent border border-zinc-700 text-amber-400 hover:bg-zinc-900 text-xs font-bold tracking-[0.2em] uppercase transition-all duration-300 flex items-center justify-center gap-2"
           >
             <Mail className="w-4 h-4" />
             {EMAIL}

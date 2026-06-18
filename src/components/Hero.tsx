@@ -44,7 +44,7 @@ export default function Hero() {
       tag: '@unoafp',
       dir: 'Nay Jimenez',
       customLogo: (
-        <div className="flex items-center justify-center font-bold text-zinc-900">
+        <div className="flex items-center justify-center font-bold text-zinc-50">
           <span className="text-base tracking-tighter uppercase mr-1">AFP</span>
           <span className="text-base lowercase font-black text-amber-500">uno</span>
         </div>
@@ -57,7 +57,7 @@ export default function Hero() {
       customLogo: (
         <div className="flex items-center gap-1.5 text-red-600">
           <div className="w-5 h-5 rounded-full border-2 border-current flex items-center justify-center font-black text-[10px]">M</div>
-          <span className="font-display font-black text-xs tracking-widest uppercase text-zinc-900">Metro</span>
+          <span className="font-display font-black text-xs tracking-widest uppercase text-zinc-50">Metro</span>
         </div>
       )
     },
@@ -76,11 +76,11 @@ export default function Hero() {
       tag: '@probiplus',
       dir: 'Stanley Films',
       customLogo: (
-        <div className="flex items-center gap-1.5 text-zinc-900">
+        <div className="flex items-center gap-1.5 text-zinc-50">
           <svg viewBox="0 0 24 24" className="w-4 h-4 fill-none stroke-current" strokeWidth="2.5">
             <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
-          <span className="font-display font-black text-xs tracking-widest text-zinc-900">PROBIPLUS</span>
+          <span className="font-display font-black text-xs tracking-widest text-zinc-50">PROBIPLUS</span>
         </div>
       )
     },
@@ -110,7 +110,7 @@ export default function Hero() {
   ];
 
   return (
-    <section id="inicio" className="relative bg-white">
+    <section id="inicio" className="relative bg-zinc-950">
       {/* WIDE CINEMATIC BANNER — moving reel as background */}
       <div className="relative w-full h-[58vh] min-h-[420px] max-h-[640px] flex flex-col overflow-hidden bg-black">
         <video
@@ -123,6 +123,12 @@ export default function Hero() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/25 to-black/75" />
 
+        {/* Signature element: live timecode + REC indicator, evoking a rolling camera */}
+        <div className="absolute top-5 left-5 sm:top-7 sm:left-7 z-10 flex items-center gap-2 font-mono text-[11px] text-zinc-200/90 tracking-widest">
+          <span className="rec-dot w-2 h-2 rounded-full bg-amber-500" />
+          REC · 00:00:14:08
+        </div>
+
         <div className="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-6">
           <h1 className="font-display font-black text-2xl sm:text-4xl md:text-5xl text-white tracking-[0.03em] uppercase leading-[1.05] max-w-4xl">
             Imágenes que no<br />se quedan quietas.
@@ -131,14 +137,14 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
             <button
               onClick={() => handleScroll('contacto')}
-              className="w-full sm:w-auto px-8 py-4 bg-white text-black hover:bg-zinc-200 text-xs font-bold tracking-[0.2em] uppercase transition-all duration-300 flex items-center justify-center gap-2"
+              className="w-full sm:w-auto px-8 py-4 bg-amber-500 text-zinc-950 hover:bg-amber-400 text-xs font-bold tracking-[0.2em] uppercase transition-all duration-300 flex items-center justify-center gap-2"
             >
               Cotizar Proyecto
               <ArrowUpRight className="w-4 h-4" />
             </button>
             <button
               onClick={() => setReelOpen(true)}
-              className="w-full sm:w-auto px-8 py-4 bg-white/10 border border-white/30 text-white hover:bg-white/20 text-xs font-bold tracking-[0.2em] uppercase transition-all duration-300 flex items-center justify-center gap-2 backdrop-blur-sm"
+              className="w-full sm:w-auto px-8 py-4 bg-zinc-950/10 border border-white/30 text-white hover:bg-zinc-950/20 text-xs font-bold tracking-[0.2em] uppercase transition-all duration-300 flex items-center justify-center gap-2 backdrop-blur-sm"
             >
               <Play className="w-3.5 h-3.5 fill-white" />
               Ver Reel
@@ -148,7 +154,7 @@ export default function Hero() {
       </div>
 
       {/* TRUSTED CLIENTS / CREDITS SECTION */}
-      <div className="border-b border-zinc-200 py-12 bg-zinc-50/50">
+      <div className="border-b border-zinc-800 py-12 bg-zinc-900/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
           <div className="text-center space-y-2 mb-8">
             <div className="flex justify-center items-center gap-1 text-amber-500">
@@ -158,7 +164,7 @@ export default function Hero() {
               <Star className="w-4 h-4 fill-amber-500" />
               <Star className="w-4 h-4 fill-amber-500" />
             </div>
-            <p className="text-xs font-bold tracking-[0.22em] text-zinc-900 uppercase">
+            <p className="text-xs font-bold tracking-[0.22em] text-zinc-50 uppercase">
               Marcas que han confiado en nuestro trabajo
             </p>
           </div>
@@ -168,7 +174,7 @@ export default function Hero() {
               {[...clientLogos, ...clientLogos].map((client, idx) => (
                 <div
                   key={idx}
-                  className="flex-none w-[160px] h-[100px] flex items-center justify-center p-6 border-2 border-zinc-100 bg-white rounded-lg hover:-translate-y-1 hover:shadow-lg hover:border-amber-300 transition-all duration-300"
+                  className="flex-none w-[160px] h-[100px] flex items-center justify-center p-6 border-2 border-zinc-900 bg-zinc-950 rounded-lg hover:-translate-y-1 hover:shadow-lg hover:border-amber-300 transition-all duration-300"
                 >
                   {client.logoUrl ? (
                     <img

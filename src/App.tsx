@@ -8,7 +8,8 @@ import Footer from './components/Footer';
 
 export default function App() {
   return (
-    <div className="relative min-h-screen bg-white text-zinc-900 overflow-x-hidden antialiased selection:bg-black selection:text-white">
+    <div className="relative min-h-screen bg-zinc-950 text-zinc-50 overflow-x-hidden antialiased selection:bg-amber-500 selection:text-zinc-950">
+      <div className="film-grain" />
       {/* Global Navigation Header */}
       <Navbar />
 

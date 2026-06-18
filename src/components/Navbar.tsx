@@ -50,14 +50,14 @@ export default function Navbar() {
         transition={{ duration: 0.6, ease: 'easeOut' }}
         className={`fixed top-0 left-0 right-0 z-50 py-5 transition-colors duration-300 ${
           scrolled
-            ? 'bg-white border-b border-zinc-200/80 shadow-md'
-            : 'bg-white/95 backdrop-blur-sm border-b border-zinc-100'
+            ? 'bg-zinc-950 border-b border-zinc-800/80 shadow-md'
+            : 'bg-zinc-950/90 backdrop-blur-sm border-b border-zinc-900'
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           {/* Logo */}
           <a href="#inicio" onClick={(e) => handleNavClick(e, 'inicio')} className="cursor-pointer">
-            <Logo size="sm" withText={true} theme="light" />
+            <Logo size="sm" withText={true} theme="dark" />
           </a>
 
           {/* Desktop Navigation Links */}
@@ -67,7 +67,7 @@ export default function Navbar() {
                 key={`${link.id}-${idx}`}
                 href={`#${link.id}`}
                 onClick={(e) => handleNavClick(e, link.id)}
-                className="text-xs font-bold tracking-[0.15em] text-zinc-900 hover:text-zinc-500 transition-colors duration-200 uppercase"
+                className="text-xs font-bold tracking-[0.15em] text-zinc-50 hover:text-zinc-500 transition-colors duration-200 uppercase"
               >
                 {link.title}
               </a>
@@ -80,7 +80,7 @@ export default function Navbar() {
               href="https://www.instagram.com/josemiraw.mino/"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 text-zinc-650 hover:text-black transition-colors"
+              className="p-2 text-zinc-400 hover:text-amber-400 transition-colors"
               title="Instagram"
             >
               <Instagram className="w-4 h-4" />
@@ -88,7 +88,7 @@ export default function Navbar() {
             <a
               href="#contacto"
               onClick={(e) => handleNavClick(e, 'contacto')}
-              className="px-6 py-3 bg-black border border-black text-white hover:bg-zinc-800 hover:border-zinc-800 text-xs font-bold tracking-[0.18em] uppercase transition-all duration-300 flex items-center gap-1.5 shadow-[2px_2px_0px_rgba(0,0,0,0.15)]"
+              className="px-6 py-3 bg-amber-500 border border-amber-500 text-zinc-950 hover:bg-amber-400 hover:border-amber-400 text-xs font-bold tracking-[0.18em] uppercase transition-all duration-300 flex items-center gap-1.5"
             >
               COTIZAR PROYECTO
               <ArrowUpRight className="w-3.5 h-3.5" />
@@ -101,13 +101,13 @@ export default function Navbar() {
               href="https://www.instagram.com/josemiraw.mino/"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-1.5 text-zinc-600 hover:text-black transition-colors"
+              className="p-1.5 text-zinc-400 hover:text-amber-400 transition-colors"
             >
               <Instagram className="w-4 h-4" />
             </a>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-zinc-700 hover:text-black transition-colors focus:outline-none"
+              className="p-2 text-zinc-700 hover:text-amber-400 transition-colors focus:outline-none"
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
@@ -123,7 +123,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-x-0 top-[70px] z-[45] md:hidden bg-white border-b border-zinc-200 py-8 px-6 shadow-xl flex flex-col gap-6"
+            className="fixed inset-x-0 top-[70px] z-[45] md:hidden bg-zinc-950 border-b border-zinc-800 py-8 px-6 shadow-xl flex flex-col gap-6"
           >
             <div className="flex flex-col gap-4">
               {navLinks.map((link, idx) => (
@@ -131,7 +131,7 @@ export default function Navbar() {
                   key={`mob-${link.id}-${idx}`}
                   href={`#${link.id}`}
                   onClick={(e) => handleNavClick(e, link.id)}
-                  className="text-sm font-bold text-zinc-900 hover:text-zinc-650 uppercase tracking-[0.15em] py-2 border-b border-zinc-100"
+                  className="text-sm font-bold text-zinc-50 hover:text-zinc-400 uppercase tracking-[0.15em] py-2 border-b border-zinc-900"
                 >
                   {link.title}
                 </a>
@@ -141,7 +141,7 @@ export default function Navbar() {
             <a
               href="#contacto"
               onClick={(e) => handleNavClick(e, 'contacto')}
-              className="w-full text-center px-6 py-3.5 bg-black text-white font-bold tracking-[0.15em] uppercase hover:bg-zinc-800 transition-all duration-300"
+              className="w-full text-center px-6 py-3.5 bg-amber-500 text-zinc-950 font-bold tracking-[0.15em] uppercase hover:bg-amber-400 transition-all duration-300"
             >
               COTIZAR PROYECTO
             </a>

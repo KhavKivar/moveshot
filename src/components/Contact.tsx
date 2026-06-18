@@ -14,11 +14,6 @@ export default function Contact() {
   return (
     <section id="contacto" className="py-24 md:py-32 bg-white relative border-b border-zinc-200">
       <div className="max-w-3xl mx-auto px-6 text-center">
-        <span className="text-sm font-medium text-zinc-500 flex items-center justify-center gap-2 mb-4">
-          <span className="w-1.5 h-1.5 rounded-full bg-zinc-400" />
-          Agendar rodaje
-        </span>
-
         <h2 className="font-display font-semibold text-3xl sm:text-5xl text-zinc-950 tracking-tight leading-none">
           ¿Tienes un proyecto?<br className="hidden sm:block" /> Hablemos.
         </h2>

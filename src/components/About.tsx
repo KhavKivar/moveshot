@@ -36,16 +36,11 @@ export default function About() {
 
           {/* Left Column: Story & Who is Jose Miguel */}
           <div className="lg:col-span-7 flex flex-col gap-6">
-            <span className="text-sm font-medium text-zinc-500 flex items-center gap-2 mb-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-zinc-400" />
-              Detrás de la lente
-            </span>
-
             <h2 className="font-display font-semibold text-3xl sm:text-5xl text-zinc-950 tracking-tight leading-none">
               José Miguel Miño
             </h2>
             <p className="text-sm text-zinc-500">
-              Director de Fotografía &amp; Presidente de la ACC
+              Detrás de la lente — Director de Fotografía &amp; Presidente de la ACC
             </p>
 
             <p className="font-serif italic text-zinc-700 text-base sm:text-lg leading-relaxed mt-2">

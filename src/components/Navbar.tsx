@@ -1,23 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X, ArrowUpRight, Instagram } from 'lucide-react';
 import Logo from './Logo';
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 40) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault();
@@ -48,11 +35,7 @@ export default function Navbar() {
         initial={{ y: -50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
-        className={`fixed top-0 left-0 right-0 z-50 py-4 transition-all duration-300 ${
-          scrolled
-            ? 'bg-white/90 backdrop-blur-xl border-b border-zinc-200/70 shadow-[0_1px_0_rgba(0,0,0,0.02)]'
-            : 'bg-white/70 backdrop-blur-md border-b border-transparent'
-        }`}
+        className="fixed top-0 left-0 right-0 z-50 py-4 bg-white border-b border-zinc-200"
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           {/* Logo */}
@@ -123,7 +106,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-x-0 top-[64px] z-[45] md:hidden bg-white/95 backdrop-blur-xl border-b border-zinc-200/70 py-8 px-6 shadow-lg flex flex-col gap-6"
+            className="fixed inset-x-0 top-[64px] z-[45] md:hidden bg-white border-b border-zinc-200 py-8 px-6 shadow-lg flex flex-col gap-6"
           >
             <div className="flex flex-col gap-1">
               {navLinks.map((link, idx) => (

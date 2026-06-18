@@ -181,14 +181,12 @@ export default function Portfolio() {
         
         {/* Section Heading */}
         <div className="flex flex-col items-center text-center mb-16">
-          <span className="text-[10px] font-mono tracking-[0.3em] text-zinc-500 uppercase flex items-center gap-2 mb-3">
-            <span className="w-1.5 h-1.5 rounded-full bg-zinc-400" />
-            Portafolio Publicitario & Videoclips
-          </span>
           <h2 className="font-display font-black text-3xl sm:text-5xl text-black tracking-[0.1em] uppercase leading-none">
-            PROYECTOS COMERCIALES
+            Proyectos comerciales
           </h2>
-          <div className="w-16 h-[2px] bg-black mt-6" />
+          <p className="text-zinc-500 text-sm mt-4 max-w-md">
+            Portafolio publicitario y videoclips realizados para marcas chilenas.
+          </p>
         </div>
 
         {/* Filter Tabs */}
@@ -223,7 +221,7 @@ export default function Portfolio() {
                 exit={{ opacity: 0, scale: 0.96 }}
                 transition={{ duration: 0.4 }}
                 whileHover={{ y: -6 }}
-                className="group relative rounded-sm overflow-hidden bg-white border border-zinc-200 hover:border-black/30 hover:shadow-xl transition-all duration-300 cursor-pointer"
+                className="group relative rounded-sm overflow-hidden bg-white border border-zinc-200 hover:border-zinc-400 transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedProject(project)}
               >
                 {/* Image container */}
@@ -285,7 +283,7 @@ export default function Portfolio() {
               initial={{ scale: 0.97, y: 15 }}
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.97, y: 15 }}
-              transition={{ type: 'spring', damping: 25 }}
+              transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
               className="relative w-full max-w-4xl rounded-sm overflow-hidden bg-white border border-zinc-200 shadow-2xl my-8 flex flex-col"
             >
               {/* Close Button */}

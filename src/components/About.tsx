@@ -36,16 +36,11 @@ export default function About() {
 
           {/* Left Column: Story & Who is Jose Miguel */}
           <div className="lg:col-span-7 flex flex-col gap-6">
-            <span className="text-[10px] font-mono tracking-[0.3em] text-zinc-500 uppercase flex items-center gap-2 mb-2 font-bold">
-              <span className="w-1.5 h-1.5 rounded-full bg-zinc-400" />
-              Detrás de la Lente
-            </span>
-
             <h2 className="font-display font-black text-3xl sm:text-5xl text-black tracking-[0.1em] uppercase leading-none">
-              JOSÉ MIGUEL MIÑO
+              José Miguel Miño
             </h2>
             <p className="text-[11px] sm:text-xs font-mono tracking-[0.2em] text-zinc-500 uppercase">
-              Director de Fotografía &amp; Presidente de la ACC
+              Detrás de la lente — Director de Fotografía &amp; Presidente de la ACC
             </p>
 
             <p className="font-serif italic text-zinc-700 text-base sm:text-lg leading-relaxed mt-2">
@@ -92,7 +87,7 @@ export default function About() {
               whileInView={{ scale: 1, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="relative aspect-[4/3] rounded-sm overflow-hidden shadow-xl group border border-zinc-200"
+              className="relative aspect-[4/3] rounded-sm overflow-hidden group border border-zinc-200"
             >
               <img
                 src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=800&q=80"

@@ -14,16 +14,16 @@ export default function Contact() {
   return (
     <section id="contacto" className="py-24 md:py-32 bg-white relative border-b border-zinc-200">
       <div className="max-w-3xl mx-auto px-6 text-center">
-        <span className="text-[10px] font-mono tracking-[0.3em] text-zinc-500 uppercase flex items-center justify-center gap-2 mb-4 font-bold">
+        <span className="text-sm font-medium text-zinc-500 flex items-center justify-center gap-2 mb-4">
           <span className="w-1.5 h-1.5 rounded-full bg-zinc-400" />
-          Agendar Rodaje
+          Agendar rodaje
         </span>
 
-        <h2 className="font-display font-black text-3xl sm:text-5xl text-black tracking-[0.1em] uppercase leading-none">
+        <h2 className="font-display font-semibold text-3xl sm:text-5xl text-zinc-950 tracking-tight leading-none">
           ¿Tienes un proyecto?<br className="hidden sm:block" /> Hablemos.
         </h2>
 
-        <p className="text-zinc-600 font-light text-xs sm:text-sm leading-relaxed tracking-wider uppercase mt-6 opacity-85">
+        <p className="text-zinc-500 text-sm leading-relaxed mt-5">
           Síguenos o escríbenos directo, lo que prefieras.
         </p>
 
@@ -34,32 +34,32 @@ export default function Contact() {
               href={acc.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col items-center gap-3 p-6 border border-zinc-200 rounded-sm bg-zinc-50 hover:border-black hover:bg-white transition-all duration-300 group"
+              className="flex flex-col items-center gap-3 p-6 border border-zinc-200 rounded-2xl bg-white hover:border-zinc-300 hover:shadow-sm transition-all duration-300 group"
             >
-              <div className="p-2.5 rounded-sm bg-white border border-zinc-200 text-black group-hover:bg-black group-hover:text-white transition-colors">
-                <Instagram className="w-4 h-4" />
+              <div className="p-2.5 rounded-full bg-zinc-100 text-zinc-950 group-hover:bg-zinc-950 group-hover:text-white transition-colors">
+                <Instagram className="w-4 h-4" strokeWidth={1.5} />
               </div>
-              <span className="text-xs sm:text-sm font-bold text-zinc-900 font-mono">{acc.handle}</span>
+              <span className="text-sm font-medium text-zinc-900">{acc.handle}</span>
             </a>
           ))}
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mt-10">
           <a
             href={`https://wa.me/${WHATSAPP_NUMBER}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto px-8 py-4 bg-black text-white hover:bg-zinc-800 text-xs font-bold tracking-[0.2em] uppercase transition-all duration-300 flex items-center justify-center gap-2"
+            className="w-full sm:w-auto px-7 py-3.5 rounded-full bg-zinc-950 text-white hover:bg-zinc-800 text-sm font-medium transition-all duration-300 flex items-center justify-center gap-2 shadow-sm"
           >
-            <MessageCircle className="w-4 h-4" />
+            <MessageCircle className="w-4 h-4" strokeWidth={1.5} />
             WhatsApp
-            <ArrowUpRight className="w-3.5 h-3.5" />
+            <ArrowUpRight className="w-3.5 h-3.5" strokeWidth={1.5} />
           </a>
           <a
             href={`mailto:${EMAIL}`}
-            className="w-full sm:w-auto px-8 py-4 bg-transparent border border-zinc-300 text-black hover:bg-zinc-50 text-xs font-bold tracking-[0.2em] uppercase transition-all duration-300 flex items-center justify-center gap-2"
+            className="w-full sm:w-auto px-7 py-3.5 rounded-full bg-white border border-zinc-200 text-zinc-950 hover:bg-zinc-50 hover:border-zinc-300 text-sm font-medium transition-all duration-300 flex items-center justify-center gap-2"
           >
-            <Mail className="w-4 h-4" />
+            <Mail className="w-4 h-4" strokeWidth={1.5} />
             {EMAIL}
           </a>
         </div>

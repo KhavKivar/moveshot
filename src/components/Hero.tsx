@@ -112,7 +112,7 @@ export default function Hero() {
   return (
     <section id="inicio" className="relative bg-white">
       {/* WIDE CINEMATIC BANNER — moving reel as background */}
-      <div className="relative w-full h-[58vh] min-h-[420px] max-h-[640px] flex flex-col overflow-hidden bg-black">
+      <div className="relative w-full h-[60vh] min-h-[440px] max-h-[660px] flex flex-col overflow-hidden bg-zinc-950 rounded-b-[2rem]">
         <video
           src={heroReel}
           autoPlay
@@ -121,54 +121,54 @@ export default function Hero() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/25 to-black/75" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/20 to-black/70" />
 
         <div className="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-6">
-          <h1 className="font-display font-black text-2xl sm:text-4xl md:text-5xl text-white tracking-[0.03em] uppercase leading-[1.05] max-w-4xl">
+          <h1 className="font-display font-semibold text-3xl sm:text-5xl md:text-6xl text-white tracking-tight leading-[1.05] max-w-4xl">
             Imágenes que no<br />se quedan quietas.
           </h1>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mt-9">
             <button
               onClick={() => handleScroll('contacto')}
-              className="w-full sm:w-auto px-8 py-4 bg-white text-black hover:bg-zinc-200 text-xs font-bold tracking-[0.2em] uppercase transition-all duration-300 flex items-center justify-center gap-2"
+              className="w-full sm:w-auto px-7 py-3.5 rounded-full bg-white text-zinc-950 hover:bg-zinc-200 text-sm font-medium transition-all duration-300 flex items-center justify-center gap-2 shadow-sm"
             >
-              Cotizar Proyecto
-              <ArrowUpRight className="w-4 h-4" />
+              Cotizar proyecto
+              <ArrowUpRight className="w-4 h-4" strokeWidth={1.5} />
             </button>
             <button
               onClick={() => setReelOpen(true)}
-              className="w-full sm:w-auto px-8 py-4 bg-white/10 border border-white/30 text-white hover:bg-white/20 text-xs font-bold tracking-[0.2em] uppercase transition-all duration-300 flex items-center justify-center gap-2 backdrop-blur-sm"
+              className="w-full sm:w-auto px-7 py-3.5 rounded-full bg-white/10 border border-white/25 text-white hover:bg-white/20 hover:border-white/40 text-sm font-medium transition-all duration-300 flex items-center justify-center gap-2 backdrop-blur-sm"
             >
-              <Play className="w-3.5 h-3.5 fill-white" />
-              Ver Reel
+              <Play className="w-3.5 h-3.5 fill-white" strokeWidth={1.5} />
+              Ver reel
             </button>
           </div>
         </div>
       </div>
 
       {/* TRUSTED CLIENTS / CREDITS SECTION */}
-      <div className="border-b border-zinc-200 py-12 bg-zinc-50/50">
+      <div className="border-b border-zinc-100 py-14 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-          <div className="text-center space-y-2 mb-8">
+          <div className="text-center space-y-2.5 mb-9">
             <div className="flex justify-center items-center gap-1 text-amber-500">
-              <Star className="w-4 h-4 fill-amber-500" />
-              <Star className="w-4 h-4 fill-amber-500" />
-              <Star className="w-4 h-4 fill-amber-500" />
-              <Star className="w-4 h-4 fill-amber-500" />
-              <Star className="w-4 h-4 fill-amber-500" />
+              <Star className="w-4 h-4 fill-amber-500" strokeWidth={1.5} />
+              <Star className="w-4 h-4 fill-amber-500" strokeWidth={1.5} />
+              <Star className="w-4 h-4 fill-amber-500" strokeWidth={1.5} />
+              <Star className="w-4 h-4 fill-amber-500" strokeWidth={1.5} />
+              <Star className="w-4 h-4 fill-amber-500" strokeWidth={1.5} />
             </div>
-            <p className="text-xs font-bold tracking-[0.22em] text-zinc-900 uppercase">
+            <p className="text-sm font-medium text-zinc-500">
               Marcas que han confiado en nuestro trabajo
             </p>
           </div>
 
           <div className="logo-marquee-mask overflow-hidden">
-            <div className="logo-marquee-track flex w-max gap-5 py-2">
+            <div className="logo-marquee-track flex w-max gap-4 py-2">
               {[...clientLogos, ...clientLogos].map((client, idx) => (
                 <div
                   key={idx}
-                  className="flex-none w-[160px] h-[100px] flex items-center justify-center p-6 border-2 border-zinc-100 bg-white rounded-lg hover:-translate-y-1 hover:shadow-lg hover:border-amber-300 transition-all duration-300"
+                  className="flex-none w-[160px] h-[100px] flex items-center justify-center p-6 border border-zinc-100 bg-white rounded-2xl hover:-translate-y-0.5 hover:shadow-md hover:border-zinc-200 transition-all duration-300"
                 >
                   {client.logoUrl ? (
                     <img
@@ -201,14 +201,14 @@ export default function Hero() {
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.97, y: 15 }}
               transition={{ type: 'spring', damping: 25 }}
-              className="relative w-full max-w-3xl rounded-sm overflow-hidden bg-black border border-white/10 shadow-2xl"
+              className="relative w-full max-w-3xl rounded-2xl overflow-hidden bg-black border border-white/10 shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             >
               <button
                 onClick={() => setReelOpen(false)}
-                className="absolute top-3 right-3 z-50 p-2 rounded-sm bg-black/80 text-white hover:text-white/85 transition-all border border-white/15 cursor-pointer"
+                className="absolute top-3 right-3 z-50 p-2 rounded-full bg-black/80 text-white hover:bg-black/60 transition-all border border-white/15 cursor-pointer"
               >
-                <X className="w-5 h-5" />
+                <X className="w-5 h-5" strokeWidth={1.5} />
               </button>
 
               <video

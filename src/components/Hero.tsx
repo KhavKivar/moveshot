@@ -200,7 +200,7 @@ export default function Hero() {
               initial={{ scale: 0.97, y: 15 }}
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.97, y: 15 }}
-              transition={{ type: 'spring', damping: 25 }}
+              transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
               className="relative w-full max-w-3xl rounded-2xl overflow-hidden bg-black border border-white/10 shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             >

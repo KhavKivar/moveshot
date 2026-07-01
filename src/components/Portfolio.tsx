@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Project } from '../types';
-import { Eye, Film, X, Calendar, Camera, User, Clipboard } from 'lucide-react';
+import { Eye, X, Calendar, Camera, User, Clipboard } from 'lucide-react';
 
 const PROJECTS_DATA: Project[] = [
   {
@@ -32,7 +32,7 @@ const PROJECTS_DATA: Project[] = [
     id: 'p3',
     title: 'CCU / Logística de Vanguardia',
     category: 'Comercial',
-    thumbnailUrl: 'https://images.unsplash.com/photo-1518173946687-a4c8a383392e?auto=format&fit=crop&w=800&q=80',
+    thumbnailUrl: 'https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=800&q=80',
     videoUrl: 'https://player.vimeo.com/external/510850877.sd.mp4?s=ebd04fe39046c8297b819f706dd65ef50f498c09&profile_id=165&oauth2_token_id=57447761',
     description: 'Spot comercial corporativo de gran formato para CCU y Schkolnick. Filmado íntegramente en locaciones de manufactura y distribución nacional con esquemas avanzados de iluminación led.',
     client: 'CCU @ccu',
@@ -176,16 +176,16 @@ export default function Portfolio() {
   });
 
   return (
-    <section id="portafolio" className="py-24 md:py-32 bg-white relative border-b border-zinc-200">
+    <section id="portafolio" className="py-24 md:py-32 bg-zinc-50 relative border-b border-zinc-200">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Section Heading */}
         <div className="flex flex-col items-center text-center mb-16">
           <h2 className="font-display font-semibold text-3xl sm:text-5xl text-zinc-950 tracking-tight leading-none">
-            Proyectos comerciales
+            Proyectos destacados
           </h2>
           <p className="text-zinc-500 text-sm mt-4 max-w-md">
-            Portafolio publicitario y videoclips realizados para marcas chilenas.
+            Comerciales y videoclips realizados para marcas chilenas.
           </p>
         </div>
 
@@ -276,7 +276,7 @@ export default function Portfolio() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-100 flex items-center justify-center p-4 sm:p-6 bg-black/98 backdrop-blur-md overflow-y-auto"
+            className="fixed inset-0 z-100 flex items-center justify-center p-4 sm:p-6 bg-black/95 backdrop-blur-md overflow-y-auto"
           >
             {/* Modal Box */}
             <motion.div
@@ -289,7 +289,7 @@ export default function Portfolio() {
               {/* Close Button */}
               <button
                 onClick={() => setSelectedProject(null)}
-                className="absolute top-4 right-4 z-50 p-2 rounded-full bg-black/80 text-white hover:bg-black/60 transition-all border border-zinc-700/50 cursor-pointer"
+                className="absolute top-4 right-4 z-50 p-2 rounded-full bg-black/80 text-white hover:bg-black/60 transition-all border border-white/15 cursor-pointer"
               >
                 <X className="w-5 h-5" strokeWidth={1.5} />
               </button>

@@ -87,7 +87,7 @@ export default function About() {
               whileInView={{ scale: 1, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg group border border-zinc-200"
+              className="relative aspect-[4/3] overflow-hidden shadow-lg group border border-zinc-200"
             >
               <img
                 src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=800&q=80"

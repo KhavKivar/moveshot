@@ -29,9 +29,9 @@ export default function Contact() {
               href={acc.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col items-center gap-3 p-6 border border-zinc-200 rounded-2xl bg-white hover:border-zinc-300 hover:shadow-sm transition-all duration-300 group"
+              className="flex flex-col items-center gap-3 p-6 border border-zinc-200 bg-white hover:border-zinc-300 hover:shadow-sm transition-all duration-300 group"
             >
-              <div className="p-2.5 rounded-full bg-zinc-100 text-zinc-950 group-hover:bg-zinc-950 group-hover:text-white transition-colors">
+              <div className="p-2.5 bg-zinc-100 text-zinc-950 group-hover:bg-zinc-950 group-hover:text-white transition-colors">
                 <Instagram className="w-4 h-4" strokeWidth={1.5} />
               </div>
               <span className="text-sm font-medium text-zinc-900">{acc.handle}</span>
@@ -44,7 +44,7 @@ export default function Contact() {
             href={`https://wa.me/${WHATSAPP_NUMBER}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto px-7 py-3.5 rounded-full bg-zinc-950 text-white hover:bg-zinc-800 text-sm font-medium transition-all duration-300 flex items-center justify-center gap-2 shadow-sm"
+            className="w-full sm:w-auto px-7 py-3.5 bg-zinc-950 text-white hover:bg-zinc-800 text-xs font-semibold tracking-widest uppercase transition-all duration-300 flex items-center justify-center gap-2 shadow-sm"
           >
             <MessageCircle className="w-4 h-4" strokeWidth={1.5} />
             WhatsApp
@@ -52,7 +52,7 @@ export default function Contact() {
           </a>
           <a
             href={`mailto:${EMAIL}`}
-            className="w-full sm:w-auto px-7 py-3.5 rounded-full bg-white border border-zinc-200 text-zinc-950 hover:bg-zinc-50 hover:border-zinc-300 text-sm font-medium transition-all duration-300 flex items-center justify-center gap-2"
+            className="w-full sm:w-auto px-7 py-3.5 bg-white border border-zinc-200 text-zinc-950 hover:bg-zinc-50 hover:border-zinc-300 text-sm font-medium transition-all duration-300 flex items-center justify-center gap-2"
           >
             <Mail className="w-4 h-4" strokeWidth={1.5} />
             {EMAIL}

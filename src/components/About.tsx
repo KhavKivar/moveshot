@@ -65,17 +65,17 @@ export default function About() {
             </p>
 
             {/* Quick traits list */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
+            <div className="mt-6 divide-y divide-zinc-200 border-t border-zinc-200">
               {traits.map((trait, idx) => (
-                <div key={idx} className="p-4 rounded-sm border border-zinc-200 bg-white flex gap-4 hover:border-black/30 transition-all duration-300 shadow-sm">
-                  <div className="p-2 sm:p-2.5 rounded-sm bg-zinc-100 border border-zinc-200 h-fit text-black">
+                <div key={idx} className="flex items-start gap-4 py-4">
+                  <div className="mt-0.5">
                     {trait.icon}
                   </div>
-                  <div>
-                    <h4 className="font-display font-bold text-xs text-black uppercase tracking-[0.12em] mb-1">
+                  <div className="flex flex-col sm:flex-row sm:items-baseline sm:gap-3">
+                    <h4 className="font-display font-semibold text-sm text-zinc-950 sm:w-28 shrink-0">
                       {trait.title}
                     </h4>
-                    <p className="text-zinc-500 text-[11.5px] font-light leading-relaxed">
+                    <p className="text-zinc-500 text-sm leading-relaxed">
                       {trait.description}
                     </p>
                   </div>

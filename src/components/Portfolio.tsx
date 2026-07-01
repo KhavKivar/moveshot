@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Project } from '../types';
-import { Eye, X, Calendar, Camera, User, Clipboard } from 'lucide-react';
+import { Eye, Film, X, Calendar, Camera, User, Clipboard } from 'lucide-react';
 
 const PROJECTS_DATA: Project[] = [
   {
@@ -176,32 +176,34 @@ export default function Portfolio() {
   });
 
   return (
-    <section id="portafolio" className="py-24 md:py-32 bg-zinc-50 relative border-b border-zinc-200">
+    <section id="portafolio" className="py-24 md:py-32 bg-white relative border-b border-zinc-200">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Section Heading */}
         <div className="flex flex-col items-center text-center mb-16">
-          <h2 className="font-display font-semibold text-3xl sm:text-5xl text-zinc-950 tracking-tight leading-none">
-            Proyectos destacados
+          <span className="text-[10px] font-mono tracking-[0.3em] text-zinc-500 uppercase flex items-center gap-2 mb-3">
+            <span className="w-1.5 h-1.5 rounded-full bg-zinc-400" />
+            Portafolio Publicitario & Videoclips
+          </span>
+          <h2 className="font-display font-black text-3xl sm:text-5xl text-black tracking-[0.1em] uppercase leading-none">
+            PROYECTOS COMERCIALES
           </h2>
-          <p className="text-zinc-500 text-sm mt-4 max-w-md">
-            Comerciales y videoclips realizados para marcas chilenas.
-          </p>
+          <div className="w-16 h-[2px] bg-black mt-6" />
         </div>
 
         {/* Filter Tabs */}
-        <div className="flex flex-wrap justify-center items-center gap-2 mb-16">
+        <div className="flex flex-wrap justify-center items-center gap-3 mb-16">
           {filterTabs.map((tab) => (
             <button
               key={tab}
               onClick={() => setActiveFilter(tab)}
-              className={`px-5 py-2.5 text-xs font-semibold tracking-widest uppercase transition-all duration-300 cursor-pointer border ${
+              className={`px-6 py-2.5 rounded-sm text-[10px] font-bold uppercase tracking-[0.18em] transition-all duration-300 cursor-pointer border ${
                 activeFilter === tab
-                  ? 'bg-zinc-950 text-white border-zinc-950'
-                  : 'bg-white text-zinc-600 border-zinc-200 hover:text-zinc-950 hover:border-zinc-300'
+                  ? 'bg-black text-white border-black'
+                  : 'bg-zinc-50 text-zinc-600 border-zinc-200 hover:text-black hover:bg-zinc-100 hover:border-zinc-300'
               }`}
             >
-              {tab === 'Todos' ? 'Todos los trabajos' : tab === 'Comercial' ? 'Comerciales' : 'Videoclips'}
+              {tab === 'Todos' ? 'Todos los Trabajos' : tab === 'Comercial' ? 'Comerciales' : 'Videoclips'}
             </button>
           ))}
         </div>
@@ -220,8 +222,8 @@ export default function Portfolio() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.96 }}
                 transition={{ duration: 0.4 }}
-                whileHover={{ y: -4 }}
-                className="group relative overflow-hidden bg-white border border-zinc-200 hover:border-zinc-300 hover:shadow-lg transition-all duration-300 cursor-pointer"
+                whileHover={{ y: -6 }}
+                className="group relative rounded-sm overflow-hidden bg-white border border-zinc-200 hover:border-black/30 hover:shadow-xl transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedProject(project)}
               >
                 {/* Image container */}
@@ -237,8 +239,8 @@ export default function Portfolio() {
 
                   {/* Play icon scale bounce on hover */}
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="w-11 h-11 bg-white flex items-center justify-center text-zinc-950 shadow-xl scale-75 group-hover:scale-100 transition-transform duration-300">
-                      <Eye className="w-4 h-4" strokeWidth={1.5} />
+                    <div className="w-12 h-12 rounded-full bg-black flex items-center justify-center text-white shadow-2xl scale-75 group-hover:scale-100 transition-transform duration-300">
+                      <Eye className="w-4.5 h-4.5 text-white" />
                     </div>
                   </div>
                 </div>
@@ -246,21 +248,21 @@ export default function Portfolio() {
                 {/* Info Container */}
                 <div className="p-6 bg-white">
                   <div className="flex items-center justify-between mb-3.5">
-                    <span className="px-2.5 py-1 text-[11px] font-semibold tracking-wider uppercase bg-zinc-100 text-zinc-600">
+                    <span className="px-2.5 py-0.5 rounded-sm text-[9px] font-mono tracking-widest uppercase bg-zinc-100 border border-zinc-200 text-zinc-700">
                       {project.category}
                     </span>
-                    <span className="text-xs text-zinc-400">{project.year}</span>
+                    <span className="text-[10px] font-mono text-zinc-500 tracking-wider">AÑO {project.year}</span>
                   </div>
-                  <h3 className="font-display font-semibold text-base text-zinc-900 group-hover:text-zinc-950 transition-colors duration-200 tracking-tight leading-snug">
+                  <h3 className="font-display font-bold text-md text-zinc-900 group-hover:text-black transition-colors duration-200 uppercase tracking-widest leading-snug">
                     {project.title}
                   </h3>
-                  <p className="text-zinc-500 text-sm font-normal mt-2 leading-relaxed">
+                  <p className="text-zinc-600 text-[11px] font-light mt-2.5 leading-relaxed tracking-wide uppercase opacity-90">
                     {project.description.slice(0, 105)}...
                   </p>
 
-                  <div className="flex items-center gap-2 mt-4 pt-4 border-t border-zinc-100 text-xs text-zinc-400">
-                    <span className="w-1.5 h-1.5 rounded-full bg-zinc-300" />
-                    {project.client.split(' ')[0]} &mdash; ver créditos
+                  <div className="flex items-center gap-2 mt-4 pt-4 border-t border-zinc-100 text-[9px] font-mono text-zinc-500 uppercase tracking-[0.15em]">
+                    <span className="w-1.5 h-1.5 rounded-full bg-black/40" />
+                    {project.client.split(' ')[0]} &mdash; VER CRÉDITOS
                   </div>
                 </div>
               </motion.div>
@@ -276,22 +278,22 @@ export default function Portfolio() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-100 flex items-center justify-center p-4 sm:p-6 bg-black/95 backdrop-blur-md overflow-y-auto"
+            className="fixed inset-0 z-100 flex items-center justify-center p-4 sm:p-6 bg-black/98 backdrop-blur-md overflow-y-auto"
           >
             {/* Modal Box */}
             <motion.div
               initial={{ scale: 0.97, y: 15 }}
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.97, y: 15 }}
-              transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-              className="relative w-full max-w-4xl overflow-hidden bg-white border border-zinc-200 shadow-2xl my-8 flex flex-col"
+              transition={{ type: 'spring', damping: 25 }}
+              className="relative w-full max-w-4xl rounded-sm overflow-hidden bg-white border border-zinc-200 shadow-2xl my-8 flex flex-col"
             >
               {/* Close Button */}
               <button
                 onClick={() => setSelectedProject(null)}
-                className="absolute top-4 right-4 z-50 p-2 bg-black/80 text-white hover:bg-black/60 transition-all border border-white/15 cursor-pointer"
+                className="absolute top-4 right-4 z-50 p-2 rounded-sm bg-black/80 text-white hover:text-white/80 transition-all border border-zinc-700/50 cursor-pointer"
               >
-                <X className="w-5 h-5" strokeWidth={1.5} />
+                <X className="w-5 h-5" />
               </button>
 
               {/* Video Player */}
@@ -311,58 +313,58 @@ export default function Portfolio() {
                 {/* Text Description */}
                 <div className="md:col-span-2 flex flex-col gap-4 text-zinc-900">
                   <div className="flex items-center gap-3">
-                    <span className="px-3 py-1 bg-zinc-100 text-zinc-700 text-[11px] font-semibold tracking-wider uppercase">
+                    <span className="px-3 py-1 bg-black text-white text-[10px] font-bold uppercase tracking-widest rounded-sm">
                       {selectedProject.category}
                     </span>
-                    <span className="text-xs text-zinc-400">{selectedProject.year}</span>
+                    <span className="text-[10px] font-mono text-zinc-500 tracking-wider">AÑO {selectedProject.year}</span>
                   </div>
-
-                  <h3 className="font-display font-semibold text-xl sm:text-2xl text-zinc-950 tracking-tight">
+                  
+                  <h3 className="font-display font-bold text-xl sm:text-2xl text-zinc-900 uppercase tracking-[0.1em]">
                     {selectedProject.title}
                   </h3>
-
-                  <p className="text-zinc-600 text-sm leading-relaxed">
+                  
+                  <p className="text-zinc-600 text-xs sm:text-sm font-light leading-relaxed uppercase">
                     {selectedProject.description}
                   </p>
                 </div>
 
                 {/* Specs list */}
-                <div className="space-y-4 p-5 bg-zinc-50 border border-zinc-200 h-fit text-sm text-zinc-900">
-                  <div className="text-xs font-medium text-zinc-500 border-b border-zinc-200 pb-2">
-                    Ficha técnica y créditos
+                <div className="space-y-4 p-4 rounded-sm bg-zinc-50 border border-zinc-200 h-fit text-xs font-mono text-zinc-900">
+                  <div className="text-[9px] font-bold text-zinc-500 uppercase tracking-widest border-b border-zinc-200 pb-2">
+                    Ficha Técnica y Créditos
                   </div>
-
+                  
                   <div className="flex items-start gap-2.5">
-                    <User className="w-4 h-4 text-zinc-400 mt-0.5" strokeWidth={1.5} />
+                    <User className="w-3.5 h-3.5 text-zinc-500 mt-0.5" />
                     <div>
-                      <div className="text-zinc-400 text-xs">Cliente</div>
-                      <div className="text-zinc-950 mt-0.5 font-medium">{selectedProject.client}</div>
+                      <div className="text-zinc-500 font-bold uppercase text-[9px] tracking-wider">Cliente</div>
+                      <div className="text-black mt-0.5 font-sans font-medium">{selectedProject.client}</div>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-2.5">
-                    <Clipboard className="w-4 h-4 text-zinc-400 mt-0.5" strokeWidth={1.5} />
+                    <Clipboard className="w-3.5 h-3.5 text-zinc-500 mt-0.5" />
                     <div>
-                      <div className="text-zinc-400 text-xs">Crédito / rol</div>
-                      <div className="text-zinc-950 mt-0.5 font-medium">{selectedProject.role}</div>
+                      <div className="text-zinc-500 font-bold uppercase text-[9px] tracking-wider">Crédito / Rol</div>
+                      <div className="text-black mt-0.5 font-sans font-medium">{selectedProject.role}</div>
                     </div>
                   </div>
 
                   {selectedProject.camera && (
                     <div className="flex items-start gap-2.5">
-                      <Camera className="w-4 h-4 text-zinc-400 mt-0.5" strokeWidth={1.5} />
+                      <Camera className="w-3.5 h-3.5 text-zinc-500 mt-0.5" />
                       <div>
-                        <div className="text-zinc-400 text-xs">Formato / cámara</div>
-                        <div className="text-zinc-950 mt-0.5 font-medium">{selectedProject.camera}</div>
+                        <div className="text-zinc-500 font-bold uppercase text-[9px] tracking-wider">Formato / Cámara</div>
+                        <div className="text-black mt-0.5 font-sans font-medium">{selectedProject.camera}</div>
                       </div>
                     </div>
                   )}
 
                   <div className="flex items-start gap-2.5">
-                    <Calendar className="w-4 h-4 text-zinc-400 mt-0.5" strokeWidth={1.5} />
+                    <Calendar className="w-3.5 h-3.5 text-zinc-500 mt-0.5" />
                     <div>
-                      <div className="text-zinc-400 text-xs">Rodaje</div>
-                      <div className="text-zinc-950 mt-0.5 font-medium">{selectedProject.year}</div>
+                      <div className="text-zinc-500 font-bold uppercase text-[9px] tracking-wider">Rodaje</div>
+                      <div className="text-black mt-0.5 font-sans font-medium">{selectedProject.year}</div>
                     </div>
                   </div>
                 </div>

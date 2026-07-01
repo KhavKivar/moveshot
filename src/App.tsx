@@ -18,7 +18,7 @@ export default function App() {
       {/* Rich Interactive Portafolio Grid */}
       <Portfolio />
 
-      {/* About the Director José Miguel Miño */}
+      {/* About the Director Jose Mira */}
       <About />
 
       {/* Booking and Contact Form */}

@@ -52,7 +52,7 @@ export default function Footer() {
           {/* Back to top button */}
           <button
             onClick={scrollToTop}
-            className="p-3 rounded-full bg-white border border-zinc-200 text-zinc-500 hover:text-zinc-950 hover:border-zinc-300 transition-all cursor-pointer shadow-sm"
+            className="p-3 bg-white border border-zinc-200 text-zinc-500 hover:text-zinc-950 hover:border-zinc-300 transition-all cursor-pointer shadow-sm"
             title="Volver arriba"
           >
             <ArrowUp className="w-4 h-4" strokeWidth={1.5} />

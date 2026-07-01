@@ -50,7 +50,7 @@ export default function Navbar() {
                 key={`${link.id}-${idx}`}
                 href={`#${link.id}`}
                 onClick={(e) => handleNavClick(e, link.id)}
-                className="text-sm font-medium text-zinc-600 hover:text-zinc-950 transition-colors duration-200"
+                className="text-xs font-semibold tracking-widest uppercase text-zinc-600 hover:text-zinc-950 transition-colors duration-200"
               >
                 {link.title}
               </a>
@@ -63,7 +63,7 @@ export default function Navbar() {
               href="https://www.instagram.com/josemiraw.mino/"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-full text-zinc-500 hover:text-zinc-950 hover:bg-zinc-100 transition-colors"
+              className="p-2 text-zinc-500 hover:text-zinc-950 hover:bg-zinc-100 transition-colors"
               title="Instagram"
             >
               <Instagram className="w-4 h-4" strokeWidth={1.5} />
@@ -71,7 +71,7 @@ export default function Navbar() {
             <a
               href="#contacto"
               onClick={(e) => handleNavClick(e, 'contacto')}
-              className="px-5 py-2.5 rounded-full bg-zinc-950 text-white hover:bg-zinc-800 text-sm font-medium transition-all duration-300 flex items-center gap-1.5 shadow-sm"
+              className="px-6 py-3 bg-zinc-950 text-white hover:bg-zinc-800 text-xs font-semibold tracking-widest uppercase transition-all duration-300 flex items-center gap-1.5 shadow-sm"
             >
               Cotizar proyecto
               <ArrowUpRight className="w-3.5 h-3.5" strokeWidth={1.5} />
@@ -84,13 +84,13 @@ export default function Navbar() {
               href="https://www.instagram.com/josemiraw.mino/"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-1.5 rounded-full text-zinc-500 hover:text-zinc-950 hover:bg-zinc-100 transition-colors"
+              className="p-1.5 text-zinc-500 hover:text-zinc-950 hover:bg-zinc-100 transition-colors"
             >
               <Instagram className="w-4 h-4" strokeWidth={1.5} />
             </a>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-full text-zinc-600 hover:text-zinc-950 hover:bg-zinc-100 transition-colors focus:outline-none"
+              className="p-2 text-zinc-600 hover:text-zinc-950 hover:bg-zinc-100 transition-colors focus:outline-none"
             >
               {mobileMenuOpen ? <X className="w-5 h-5" strokeWidth={1.5} /> : <Menu className="w-5 h-5" strokeWidth={1.5} />}
             </button>
@@ -124,7 +124,7 @@ export default function Navbar() {
             <a
               href="#contacto"
               onClick={(e) => handleNavClick(e, 'contacto')}
-              className="w-full text-center px-6 py-3.5 rounded-full bg-zinc-950 text-white font-medium hover:bg-zinc-800 transition-all duration-300"
+              className="w-full text-center px-6 py-3.5 bg-zinc-950 text-white text-xs font-semibold tracking-widest uppercase hover:bg-zinc-800 transition-all duration-300"
             >
               Cotizar proyecto
             </a>

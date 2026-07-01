@@ -131,14 +131,14 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mt-9">
             <button
               onClick={() => handleScroll('contacto')}
-              className="w-full sm:w-auto px-7 py-3.5 rounded-full bg-white text-zinc-950 hover:bg-zinc-200 text-sm font-medium transition-all duration-300 flex items-center justify-center gap-2 shadow-sm"
+              className="w-full sm:w-auto px-7 py-3.5 bg-white text-zinc-950 hover:bg-zinc-200 text-xs font-semibold tracking-widest uppercase transition-all duration-300 flex items-center justify-center gap-2 shadow-sm"
             >
               Cotizar proyecto
               <ArrowUpRight className="w-4 h-4" strokeWidth={1.5} />
             </button>
             <button
               onClick={() => setReelOpen(true)}
-              className="w-full sm:w-auto px-7 py-3.5 rounded-full bg-white/10 border border-white/25 text-white hover:bg-white/20 hover:border-white/40 text-sm font-medium transition-all duration-300 flex items-center justify-center gap-2 backdrop-blur-sm"
+              className="w-full sm:w-auto px-7 py-3.5 bg-white/10 border border-white/25 text-white hover:bg-white/20 hover:border-white/40 text-xs font-semibold tracking-widest uppercase transition-all duration-300 flex items-center justify-center gap-2 backdrop-blur-sm"
             >
               <Play className="w-3.5 h-3.5 fill-white" strokeWidth={1.5} />
               Ver reel
@@ -158,7 +158,7 @@ export default function Hero() {
               <Star className="w-4 h-4 fill-amber-500" strokeWidth={1.5} />
               <Star className="w-4 h-4 fill-amber-500" strokeWidth={1.5} />
             </div>
-            <p className="text-sm font-medium text-zinc-500">
+            <p className="text-xs font-semibold tracking-[0.2em] uppercase text-zinc-500">
               Marcas que han confiado en nuestro trabajo
             </p>
           </div>
@@ -168,7 +168,7 @@ export default function Hero() {
               {[...clientLogos, ...clientLogos].map((client, idx) => (
                 <div
                   key={idx}
-                  className="flex-none w-[160px] h-[100px] flex items-center justify-center p-6 border border-zinc-100 bg-white rounded-2xl hover:-translate-y-0.5 hover:shadow-md hover:border-zinc-200 transition-all duration-300"
+                  className="flex-none w-[160px] h-[100px] flex items-center justify-center p-6 border border-zinc-200 bg-white hover:-translate-y-0.5 hover:shadow-md hover:border-zinc-300 transition-all duration-300"
                 >
                   {client.logoUrl ? (
                     <img
@@ -201,12 +201,12 @@ export default function Hero() {
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.97, y: 15 }}
               transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-              className="relative w-full max-w-3xl rounded-2xl overflow-hidden bg-black border border-white/10 shadow-2xl"
+              className="relative w-full max-w-3xl overflow-hidden bg-black border border-white/10 shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             >
               <button
                 onClick={() => setReelOpen(false)}
-                className="absolute top-3 right-3 z-50 p-2 rounded-full bg-black/80 text-white hover:bg-black/60 transition-all border border-white/15 cursor-pointer"
+                className="absolute top-3 right-3 z-50 p-2 bg-black/80 text-white hover:bg-black/60 transition-all border border-white/15 cursor-pointer"
               >
                 <X className="w-5 h-5" strokeWidth={1.5} />
               </button>

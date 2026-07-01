@@ -195,7 +195,7 @@ export default function Portfolio() {
             <button
               key={tab}
               onClick={() => setActiveFilter(tab)}
-              className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 cursor-pointer border ${
+              className={`px-5 py-2.5 text-xs font-semibold tracking-widest uppercase transition-all duration-300 cursor-pointer border ${
                 activeFilter === tab
                   ? 'bg-zinc-950 text-white border-zinc-950'
                   : 'bg-white text-zinc-600 border-zinc-200 hover:text-zinc-950 hover:border-zinc-300'
@@ -221,7 +221,7 @@ export default function Portfolio() {
                 exit={{ opacity: 0, scale: 0.96 }}
                 transition={{ duration: 0.4 }}
                 whileHover={{ y: -4 }}
-                className="group relative rounded-2xl overflow-hidden bg-white border border-zinc-200 hover:border-zinc-300 hover:shadow-lg transition-all duration-300 cursor-pointer"
+                className="group relative overflow-hidden bg-white border border-zinc-200 hover:border-zinc-300 hover:shadow-lg transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedProject(project)}
               >
                 {/* Image container */}
@@ -237,7 +237,7 @@ export default function Portfolio() {
 
                   {/* Play icon scale bounce on hover */}
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="w-11 h-11 rounded-full bg-white flex items-center justify-center text-zinc-950 shadow-xl scale-75 group-hover:scale-100 transition-transform duration-300">
+                    <div className="w-11 h-11 bg-white flex items-center justify-center text-zinc-950 shadow-xl scale-75 group-hover:scale-100 transition-transform duration-300">
                       <Eye className="w-4 h-4" strokeWidth={1.5} />
                     </div>
                   </div>
@@ -246,7 +246,7 @@ export default function Portfolio() {
                 {/* Info Container */}
                 <div className="p-6 bg-white">
                   <div className="flex items-center justify-between mb-3.5">
-                    <span className="px-2.5 py-1 rounded-full text-xs font-medium bg-zinc-100 text-zinc-600">
+                    <span className="px-2.5 py-1 text-[11px] font-semibold tracking-wider uppercase bg-zinc-100 text-zinc-600">
                       {project.category}
                     </span>
                     <span className="text-xs text-zinc-400">{project.year}</span>
@@ -284,12 +284,12 @@ export default function Portfolio() {
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.97, y: 15 }}
               transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-              className="relative w-full max-w-4xl rounded-2xl overflow-hidden bg-white border border-zinc-200 shadow-2xl my-8 flex flex-col"
+              className="relative w-full max-w-4xl overflow-hidden bg-white border border-zinc-200 shadow-2xl my-8 flex flex-col"
             >
               {/* Close Button */}
               <button
                 onClick={() => setSelectedProject(null)}
-                className="absolute top-4 right-4 z-50 p-2 rounded-full bg-black/80 text-white hover:bg-black/60 transition-all border border-white/15 cursor-pointer"
+                className="absolute top-4 right-4 z-50 p-2 bg-black/80 text-white hover:bg-black/60 transition-all border border-white/15 cursor-pointer"
               >
                 <X className="w-5 h-5" strokeWidth={1.5} />
               </button>
@@ -311,7 +311,7 @@ export default function Portfolio() {
                 {/* Text Description */}
                 <div className="md:col-span-2 flex flex-col gap-4 text-zinc-900">
                   <div className="flex items-center gap-3">
-                    <span className="px-3 py-1 bg-zinc-100 text-zinc-700 text-xs font-medium rounded-full">
+                    <span className="px-3 py-1 bg-zinc-100 text-zinc-700 text-[11px] font-semibold tracking-wider uppercase">
                       {selectedProject.category}
                     </span>
                     <span className="text-xs text-zinc-400">{selectedProject.year}</span>
@@ -327,7 +327,7 @@ export default function Portfolio() {
                 </div>
 
                 {/* Specs list */}
-                <div className="space-y-4 p-5 rounded-2xl bg-zinc-50 border border-zinc-200 h-fit text-sm text-zinc-900">
+                <div className="space-y-4 p-5 bg-zinc-50 border border-zinc-200 h-fit text-sm text-zinc-900">
                   <div className="text-xs font-medium text-zinc-500 border-b border-zinc-200 pb-2">
                     Ficha técnica y créditos
                   </div>

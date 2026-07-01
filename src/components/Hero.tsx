@@ -112,7 +112,7 @@ export default function Hero() {
   return (
     <section id="inicio" className="relative bg-white">
       {/* WIDE CINEMATIC BANNER — moving reel as background */}
-      <div className="relative w-full h-[60vh] min-h-[440px] max-h-[660px] flex flex-col overflow-hidden bg-zinc-950 rounded-b-[2rem]">
+      <div className="relative w-full h-[60vh] min-h-[440px] max-h-[660px] flex flex-col overflow-hidden bg-zinc-950">
         <video
           src={heroReel}
           autoPlay
@@ -148,7 +148,7 @@ export default function Hero() {
       </div>
 
       {/* TRUSTED CLIENTS / CREDITS SECTION */}
-      <div className="border-b border-zinc-100 py-14 bg-white">
+      <div className="border-b border-zinc-200 py-14 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
           <div className="text-center space-y-2.5 mb-9">
             <div className="flex justify-center items-center gap-1 text-amber-500">
@@ -220,12 +220,12 @@ export default function Hero() {
               />
 
               <div className="p-4 bg-zinc-950 border-t border-white/5 flex items-center justify-between gap-3 text-white">
-                <span className="text-[10px] font-mono text-zinc-400 uppercase tracking-widest">MoveShot Realizadores</span>
+                <span className="text-xs font-medium text-zinc-400">MoveShot Realizadores</span>
                 <a
                   href={INSTAGRAM_REEL_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[10px] font-mono uppercase tracking-widest text-white flex items-center gap-1 hover:text-zinc-300"
+                  className="text-xs font-medium text-white flex items-center gap-1 hover:text-zinc-300 transition-colors"
                 >
                   Ver en Instagram
                   <ArrowRight className="w-3 h-3" />

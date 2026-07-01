@@ -13,7 +13,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="py-16 bg-zinc-50 border-t border-zinc-200 relative overflow-hidden">
+    <footer className="py-16 bg-white border-t border-zinc-200 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Main top footer layout */}
@@ -22,7 +22,7 @@ export default function Footer() {
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <Logo size="sm" withText={true} theme="light" />
             <p className="text-zinc-500 text-sm leading-relaxed max-w-sm mt-4">
-              Productora boutique especializada en la captura cinemática de alta velocidad, deportes de riesgo extremo, comerciales y narrativas dinámicas.
+              Productora boutique especializada en comerciales, videoclips y narrativa visual para marcas.
             </p>
           </div>
 
@@ -62,11 +62,11 @@ export default function Footer() {
         {/* Bottom footer bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-400 text-center sm:text-left">
           <div>
-            &copy; {currentYear} MoveShot Cinematografía. Todos los derechos reservados.
+            &copy; {currentYear} MoveShot. Todos los derechos reservados.
           </div>
           <div className="flex items-center gap-1.5">
             <Film className="w-3.5 h-3.5 text-zinc-400" strokeWidth={1.5} />
-            Diseñado para Jose Mira | Realizador audiovisual
+            José Miguel Miño | Director de Fotografía
           </div>
         </div>
 

@@ -27,7 +27,7 @@ export default function About() {
   ];
 
   return (
-    <section id="nosotros" className="py-24 md:py-32 bg-zinc-50 relative overflow-hidden border-b border-zinc-200">
+    <section id="nosotros" className="py-24 md:py-32 bg-white relative overflow-hidden border-b border-zinc-200">
       {/* Ambient glowing radial blur - subtle gray */}
       <div className="absolute top-1/3 -right-64 w-[600px] h-[600px] rounded-full bg-zinc-200/40 blur-[120px] pointer-events-none" />
 
@@ -60,14 +60,14 @@ export default function About() {
             </p>
 
             {/* Quick traits list */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
+            <div className="mt-6 divide-y divide-zinc-200 border-t border-zinc-200">
               {traits.map((trait, idx) => (
-                <div key={idx} className="p-4 rounded-2xl border border-zinc-200 bg-white flex gap-4 hover:border-zinc-300 hover:shadow-sm transition-all duration-300">
-                  <div className="p-2.5 rounded-full bg-zinc-100 h-fit text-zinc-950">
+                <div key={idx} className="flex items-start gap-4 py-4">
+                  <div className="mt-0.5">
                     {trait.icon}
                   </div>
-                  <div>
-                    <h4 className="font-display font-semibold text-sm text-zinc-950 mb-1">
+                  <div className="flex flex-col sm:flex-row sm:items-baseline sm:gap-3">
+                    <h4 className="font-display font-semibold text-sm text-zinc-950 sm:w-28 shrink-0">
                       {trait.title}
                     </h4>
                     <p className="text-zinc-500 text-sm leading-relaxed">

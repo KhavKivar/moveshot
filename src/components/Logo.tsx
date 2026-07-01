@@ -89,7 +89,7 @@ export default function Logo({ className = '', size = 'md', withText = true, the
       {withText && (
         <div className="flex flex-col">
           <span className={`font-display font-bold ${isLight ? 'text-black' : 'text-white'} tracking-[0.2em] text-lg uppercase leading-none`}>
-            Move<span className={`${isLight ? 'text-zinc-650' : 'text-white'} font-light opacity-80`}>Shot</span>
+            Move<span className={`${isLight ? 'text-zinc-600' : 'text-white'} font-light opacity-80`}>Shot</span>
           </span>
           <span className={`text-[9px] ${isLight ? 'text-zinc-500' : 'text-gray-400 opacity-40'} font-mono tracking-[0.3em] uppercase leading-none mt-1`}>
             CINEMA & PROD

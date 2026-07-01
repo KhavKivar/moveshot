@@ -12,13 +12,13 @@ const instagramAccounts = [
 
 export default function Contact() {
   return (
-    <section id="contacto" className="py-24 md:py-32 bg-white relative border-b border-zinc-200">
+    <section id="contacto" className="py-24 md:py-32 bg-zinc-50 relative border-b border-zinc-200">
       <div className="max-w-3xl mx-auto px-6 text-center">
         <h2 className="font-display font-semibold text-3xl sm:text-5xl text-zinc-950 tracking-tight leading-none">
           ¿Tienes un proyecto?<br className="hidden sm:block" /> Hablemos.
         </h2>
 
-        <p className="text-zinc-500 text-sm leading-relaxed mt-5">
+        <p className="text-zinc-500 text-sm leading-relaxed mt-4">
           Síguenos o escríbenos directo, lo que prefieras.
         </p>
 

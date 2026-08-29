@@ -1,24 +1,41 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# Moveshot Studio
 
-# Run and deploy your AI Studio app
+A cinematic portfolio site for an audiovisual production studio. The interface combines full-screen video, motion-driven transitions, project reels, an editorial profile, and a contact experience in a responsive React application.
 
-This contains everything you need to run your app locally.
+## Highlights
 
-View your app in AI Studio: https://ai.studio/apps/cd4a7bf8-7bf4-408b-9372-f6bf16b6cc6c
+- Responsive single-page composition
+- Motion-based navigation and section transitions
+- Video-first hero and project portfolio
+- Alternate visual explorations preserved in screenshots
+- Cloudflare Pages deployment workflow
+- TypeScript, React 19, Vite, Tailwind CSS, and Motion
 
-## Run Locally
+## Getting started
 
-**Prerequisites:**  Node.js
+Requirements: Node.js 20+ and pnpm.
 
+```bash
+pnpm install
+cp .env.example .env.local
+pnpm dev
+```
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+The site runs at `http://localhost:3000` by default. The Gemini key is optional for the current static portfolio experience; never commit a real key.
 
-## Deploy
+## Validation
 
-Deploys automatically to Cloudflare Pages on push to `main`.
+```bash
+pnpm lint
+pnpm build
+```
+
+## Structure
+
+```text
+src/components/  Page sections and reusable visual elements
+src/assets/      Images, logos, and the local hero reel
+screenshots/     Captures of the implemented design directions
+```
+
+This repository is a portfolio snapshot. Brand media remains the property of its respective owners and is included only to demonstrate the implemented experience.
